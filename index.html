@@ -124,7 +124,7 @@
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hello Everyone 👋, I'm
-              <span class="text-dark text-4xl mt-1 lg:text-5xl dark:text-white"
+              <span class="text-dark text-4xl mt-1 lg:text-5xl dark:text-white`"
                 >Antonius Jonathan Hulu</span
               >
             </h1>
@@ -434,37 +434,37 @@
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/Google.svg" alt="Google" />
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/Amazon_logo.svg.svg" alt="Amazon" />
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/Nvidia_logo.svg.svg" alt="Nvidia" />
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/Meta.svg" alt="Meta" />
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/Apple_logo_black.svg" alt="Apple" />
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
             >
               <img src="images/clients/ibm.svg" alt="IBM" />
@@ -514,8 +514,8 @@
                   >
                 </h3>
                 <p class="font-medium text-base text-secondary mb-6">
-                  Legal experts discuss the impact of artificial intelligence on
-                  elections, the law and justice.
+                  Legal experts explore how AI is shaping elections and the
+                  justice system.
                 </p>
                 <a
                   href="https://hls.harvard.edu/today/stephanopoulos-buckland-discuss-the-impact-of-ai-on-justice-systems-and-democracy/"
@@ -577,8 +577,7 @@
                   >
                 </h3>
                 <p class="font-medium text-base text-secondary mb-6">
-                  Crypto on the rise: President Donald Trump's regulatory and
-                  policy implications.
+                  President Donald Trump's regulatory and policy implications.
                 </p>
                 <a
                   href="https://www.gisreportsonline.com/r/cryptocurrency-regulations"
@@ -682,12 +681,13 @@
                 class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500"
               >
                 Send
-                <p id="notif" class="text-green-500 text-center mt-4 hidden">Your message has been sent. Thank you!</p>
-
+                <p id="notif" class="text-white text-center mt-4 hidden">
+                  Your message has been sent. Thank you!
+                </p>
               </button>
             </div>
           </div>
-        </form onsubmit="sendToEmail(event)">
+        </form>
       </div>
     </section>
     <!-- Contact Section End -->
@@ -916,36 +916,34 @@
     <script>
       function sendToEmail(event) {
         event.preventDefault(); // Biar ga reload
-    
+
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
-    
+
         if (!name || !email || !message) {
-          alert("Mohon isi semua field terlebih dahulu!");
+          alert("Please fill in all fields first!");
           return;
         }
-    
+
         const subject = `Pesan dari ${name}`;
         const body = `Nama: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0APesan:%0D%0A${message}`;
-    
+
         const mailtoLink = `mailto:jonathanhulu10@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    
+
         // Buka email client
         window.location.href = mailtoLink;
-    
+
         // Tampilkan notifikasi
         const notif = document.getElementById("notif");
         notif.classList.remove("hidden");
         notif.classList.add("block");
-    
+
         // Reset form (opsional)
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
       }
     </script>
-    
-    
   </body>
-</html>
+</html>`
